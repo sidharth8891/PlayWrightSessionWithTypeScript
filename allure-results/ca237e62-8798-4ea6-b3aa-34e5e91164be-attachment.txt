@@ -1,0 +1,6 @@
+PUT Status: 200
+PUT Response: {
+  name: 'UpdatedName',
+  job: 'QA Lead',
+  updatedAt: '2025-09-14T05:33:14.548Z'
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Playwright Locator Filter Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 1rem 0; border: 1px solid #ccc; padding: 1rem; border-radius: 8px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <h1>Playwright Locator Filter Demo</h1>
+    <!-- <iframe id="my-frame" srcdoc="
+    <!DOCTYPE html>
+    <html lang='en'>
+    <head>
+      <meta charset='UTF-8'>
+      <title>Inner Frame</title>
+      <style>
+        body { font-family: sans-serif; padding: 20px; }
+        button { padding: 8px 12px; }
+      </style>
+    </head>
+    <body>
+      <h2>Inside the Frame</h2>
+      <button>Submit</button>
+    </body>
+    </html>
+  " width="400" height="200"></iframe>
+
+  <iframe class="result-frame" srcdoc="
+    <!DOCTYPE html>
+    <html lang='en'>
+    <head><meta charset='UTF-8'></head>
+    <body>
+      <button>Click Me</button>
+    </body>
+    </html>
+  " width="200" height="100"></iframe>
+
+  <iframe class="result-frame" srcdoc="
+    <!DOCTYPE html>
+    <html lang='en'>
+    <head><meta charset='UTF-8'></head>
+    <body>
+      <button>Click Me</button>
+    </body>
+    </html>
+  " width="200" height="100"></iframe> -->
+
+  <!-- Product Card Filtering -->
+  <ul role="list">
+    <li role="listitem">
+      <h3 role="heading">Product 1</h3>
+      <button role="button">Add to cart</button>
+    </li>
+    <li role="listitem">
+      <h3 role="heading">Product 2</h3>
+      <button role="button">Add to cart</button>
+    </li>
+    <li role="listitem">
+      <h3 role="heading">Product 3</h3>
+      <span>Out of stock</span>
+    </li>
+  </ul>
+
+  <!-- List of Fruits -->
+  <ul role="list">
+    <li role="listitem" data-testid="apple">apple</li>
+    <li role="listitem" data-testid="banana">banana</li>
+    <li role="listitem" data-testid="orange">orange</li>
+  </ul>
+
+  <!-- John/Mary Filter Combo -->
+  <ul role="list">
+    <li role="listitem">
+      <div>John</div>
+      <div><button role="button">Say hello</button></div>
+    </li>
+    <li role="listitem">
+      <div>Mary</div>
+      <div><button role="button">Say hello</button></div>
+    </li>
+    <li role="listitem">
+      <div>John</div>
+      <div><button role="button">Say goodbye</button></div>
+    </li>
+    <li role="listitem">
+      <div>Mary</div>
+      <div><button role="button">Say goodbye</button></div>
+    </li>
+  </ul>
+
+  <!-- Visibility Test -->
+  <button style="display: none">Invisible</button>
+  <button>Visible</button>
+
+  <!-- Optional Dialog Example -->
+  <div data-testid="settings-dialog" style="display: none">Confirm security settings
+    <button role="button">Dismiss</button>
+  </div>
+  <button role="button" title="Subscribe">Subscribe</button>
+  <button role="button">New</button>
+</body>
+</html>

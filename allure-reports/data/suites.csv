@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","5152","Login test with logger","webkit","Fri Sep 12 21:36:34 PDT 2025","passed","Fri Sep 12 21:36:39 PDT 2025","","logintest.spec.ts","",""
+"","4830","Login test with logger","chromium","Fri Sep 12 21:36:34 PDT 2025","passed","Fri Sep 12 21:36:38 PDT 2025","","logintest.spec.ts","",""
+"","5154","Login test with logger","firefox","Fri Sep 12 21:36:34 PDT 2025","passed","Fri Sep 12 21:36:39 PDT 2025","","logintest.spec.ts","",""

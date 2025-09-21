@@ -1,0 +1,10 @@
+{
+  name: 'sid',
+  job: 'sdet',
+  skills: [ 'Java', 'Selenium' ],
+  address: { street: '123 lynnwodd', city: 'seattle' },
+  id: '615',
+  createdAt: '2025-09-20T05:02:46.391Z'
+}
+[ 'Java', 'Selenium' ]
+{ street: '123 lynnwodd', city: 'seattle' }

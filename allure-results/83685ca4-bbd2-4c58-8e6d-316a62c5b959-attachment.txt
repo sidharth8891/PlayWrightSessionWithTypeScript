@@ -1,0 +1,8 @@
+Created User: {
+  name: 'sid',
+  job: 'the one',
+  id: '643',
+  createdAt: '2025-09-20T05:15:03.497Z'
+}
+643
+Fetched User: {}

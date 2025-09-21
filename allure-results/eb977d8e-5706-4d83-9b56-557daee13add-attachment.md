@@ -1,0 +1,231 @@
+# Page snapshot
+
+```yaml
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner:
+  - heading "Navigation Menu" [level=2]
+  - link "Homepage":
+    - /url: /
+  - navigation "Global":
+    - list:
+      - listitem:
+        - button "Platform"
+      - listitem:
+        - button "Solutions"
+      - listitem:
+        - button "Resources"
+      - listitem:
+        - button "Open Source"
+      - listitem:
+        - button "Enterprise"
+      - listitem:
+        - link "Pricing":
+          - /url: https://github.com/pricing
+  - button "Search or jump to…"
+  - link "Sign in":
+    - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fgithub-sidharth8891%2FRestAssuredWithChatGPT%2Fissues
+  - heading "Sign in to GitHub" [level=4]
+  - text: Username or email address
+  - textbox "Username or email address"
+  - text: Password
+  - textbox "Password"
+  - link "Forgot password?":
+    - /url: /password_reset
+  - button "Sign in"
+  - link "or continue with other methods":
+    - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fgithub-sidharth8891%2FRestAssuredWithChatGPT%2Fissues
+  - link "Sign up":
+    - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fgithub-sidharth8891%2FRestAssuredWithChatGPT%2Fissues&source=header
+  - button "Appearance settings"
+- main:
+  - img "404 “This is not the web page you are looking for”"
+  - search:
+    - text: "Find code, projects, and people on GitHub:"
+    - textbox "Find code, projects, and people on GitHub:"
+    - button "Search"
+  - link "Contact Support":
+    - /url: https://support.github.com?tags=dotcom-404
+  - text: —
+  - link "GitHub Status":
+    - /url: https://githubstatus.com
+  - text: —
+  - link "@githubstatus":
+    - /url: https://twitter.com/githubstatus
+- contentinfo:
+  - heading "Site-wide Links" [level=2]
+  - link "Go to GitHub homepage":
+    - /url: /
+    - img
+  - heading "Subscribe to our developer newsletter" [level=3]
+  - paragraph: Get tips, technical guides, and best practices. Twice a month.
+  - link "Subscribe":
+    - /url: https://resources.github.com/newsletter/
+  - navigation "Platform":
+    - heading "Platform" [level=3]
+    - list:
+      - listitem:
+        - link "Features":
+          - /url: /features
+      - listitem:
+        - link "Enterprise":
+          - /url: /enterprise
+      - listitem:
+        - link "Copilot":
+          - /url: /features/copilot
+      - listitem:
+        - link "AI":
+          - /url: /features/ai
+      - listitem:
+        - link "Security":
+          - /url: /security
+      - listitem:
+        - link "Pricing":
+          - /url: /pricing
+      - listitem:
+        - link "Team":
+          - /url: /team
+      - listitem:
+        - link "Resources":
+          - /url: https://resources.github.com
+      - listitem:
+        - link "Roadmap":
+          - /url: https://github.com/github/roadmap
+      - listitem:
+        - link "Compare GitHub":
+          - /url: https://resources.github.com/devops/tools/compare
+  - navigation "Ecosystem":
+    - heading "Ecosystem" [level=3]
+    - list:
+      - listitem:
+        - link "Developer API":
+          - /url: https://docs.github.com/get-started/exploring-integrations/about-building-integrations
+      - listitem:
+        - link "Partners":
+          - /url: https://partner.github.com
+      - listitem:
+        - link "Education":
+          - /url: https://github.com/edu
+      - listitem:
+        - link "GitHub CLI":
+          - /url: https://cli.github.com
+      - listitem:
+        - link "GitHub Desktop":
+          - /url: https://desktop.github.com
+      - listitem:
+        - link "GitHub Mobile":
+          - /url: https://github.com/mobile
+      - listitem:
+        - link "GitHub Marketplace":
+          - /url: https://github.com/marketplace
+      - listitem:
+        - link "MCP Registry":
+          - /url: https://github.com/mcp
+  - navigation "Support":
+    - heading "Support" [level=3]
+    - list:
+      - listitem:
+        - link "Docs":
+          - /url: https://docs.github.com
+      - listitem:
+        - link "Community Forum":
+          - /url: https://github.community
+      - listitem:
+        - link "Professional Services":
+          - /url: https://services.github.com
+      - listitem:
+        - link "Premium Support":
+          - /url: /enterprise/premium-support
+      - listitem:
+        - link "Skills":
+          - /url: https://skills.github.com
+      - listitem:
+        - link "Status":
+          - /url: https://www.githubstatus.com
+      - listitem:
+        - link "Contact GitHub":
+          - /url: https://support.github.com?tags=dotcom-footer
+  - navigation "Company":
+    - heading "Company" [level=3]
+    - list:
+      - listitem:
+        - link "About":
+          - /url: https://github.com/about
+      - listitem:
+        - link "Why GitHub":
+          - /url: https://github.com/why-github
+      - listitem:
+        - link "Customer stories":
+          - /url: /customer-stories?type=enterprise
+      - listitem:
+        - link "Blog":
+          - /url: https://github.blog
+      - listitem:
+        - link "The ReadME Project":
+          - /url: /readme
+      - listitem:
+        - link "Careers":
+          - /url: https://github.careers
+      - listitem:
+        - link "Newsroom":
+          - /url: /newsroom
+      - listitem:
+        - link "Inclusion":
+          - /url: /about/diversity
+      - listitem:
+        - link "Social Impact":
+          - /url: https://socialimpact.github.com
+      - listitem:
+        - link "Shop":
+          - /url: https://shop.github.com
+  - navigation "Legal and Resource Links":
+    - list:
+      - listitem:
+        - text: ©
+        - time: "2025"
+        - text: GitHub, Inc.
+      - listitem:
+        - link "Terms":
+          - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - listitem:
+        - link "Privacy":
+          - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+        - link "(Updated 02/2024) 02/2024":
+          - /url: https://github.com/github/site-policy/pull/582
+          - text: (Updated 02/2024)
+          - time: 02/2024
+      - listitem:
+        - link "Sitemap":
+          - /url: /sitemap
+      - listitem:
+        - link "What is Git?":
+          - /url: /git-guides
+      - listitem:
+        - button "Manage cookies"
+      - listitem:
+        - button "Do not share my personal information"
+  - navigation "GitHub's Social Media Links":
+    - list:
+      - listitem:
+        - link "GitHub on LinkedIn":
+          - /url: https://www.linkedin.com/company/github
+      - listitem:
+        - link "GitHub on Instagram":
+          - /url: https://www.instagram.com/github
+      - listitem:
+        - link "GitHub on YouTube":
+          - /url: https://www.youtube.com/github
+      - listitem:
+        - link "GitHub on X":
+          - /url: https://x.com/github
+      - listitem:
+        - link "GitHub on TikTok":
+          - /url: https://www.tiktok.com/@github
+      - listitem:
+        - link "GitHub on Twitch":
+          - /url: https://www.twitch.tv/github
+      - listitem:
+        - link "GitHub’s organization on GitHub":
+          - /url: https://github.com/github
+    - button "English - Select language": English
+```

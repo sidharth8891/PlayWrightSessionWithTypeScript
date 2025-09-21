@@ -1,0 +1,7 @@
+POST Status: 201
+POST Response: {
+  name: 'SIDHARTH MISHRA',
+  job: 'SDET',
+  id: '134',
+  createdAt: '2025-09-14T05:32:19.803Z'
+}

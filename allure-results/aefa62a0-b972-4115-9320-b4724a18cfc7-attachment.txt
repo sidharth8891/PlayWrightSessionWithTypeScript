@@ -1,0 +1,7 @@
+POST Status: 201
+POST Response: {
+  name: 'Sidharth',
+  job: 'SDET',
+  id: '412',
+  createdAt: '2025-09-14T05:29:05.316Z'
+}

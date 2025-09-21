@@ -1,0 +1,9 @@
+{
+  "name": "Sidharth",
+  "job": "SDET",
+  "skills":["Java","Selenium"],
+  "address":{
+    "street":"123 lynnwodd",
+    "city":"seattle"
+  }
+}

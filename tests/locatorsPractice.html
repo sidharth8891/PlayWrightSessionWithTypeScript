@@ -1,0 +1,107 @@
+<!-- demo.html -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playwright Test ID Demo</title>
+</head>
+<body>
+  <button pw-test-id="login-button">Login</button>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playwright Locators Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    section { margin-bottom: 20px; }
+    label, input, img, button { display: block; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Playwright Locator Demo Page</h1>
+
+  <!-- getByRole -->
+  <section>
+    <h2>getByRole</h2>
+    <span>Welcome, John</span>
+    <button role="button">Click Me</button>
+    <nav role="navigation">Main Navigation</nav>
+  </section>
+
+  <!-- getByText -->
+  <section>
+    <h2>getByText</h2>
+    <p>Welcome to the Playwright demo!</p>
+  </section>
+
+  <!-- getByLabel -->
+  <section>
+    <h2>getByLabel</h2>
+    <label for="email">Email Address</label>
+    <input type="email" id="email" />
+  </section>
+
+  <!-- getByPlaceholder -->
+  <section>
+    <h2>getByPlaceholder</h2>
+    <input type="text" placeholder="Search here..." />
+  </section>
+
+  <!-- getByAltText -->
+  <section>
+    <h2>getByAltText</h2>
+    <img src="https://via.placeholder.com/100" alt="Playwright Logo" />
+  </section>
+
+  <!-- getByTitle -->
+  <section>
+    <h2>getByTitle</h2>
+    <div title="More Info">Hover over me</div>
+  </section>
+
+  <!-- getByTestId -->
+  <section>
+    <h2>getByTestId</h2>
+    <button data-testid="submit-btn">Submit Form</button>
+  </section>
+
+  <!-- <ul>
+  <li>
+    <h3>Product 1</h3>
+    <button>Add to cart</button>
+  </li>
+  <li>
+    <h3>Product 2</h3>
+    <button>Add to cart</button>
+  </li>
+</ul> -->
+<!-- <ul>
+  <li>apple</li>
+  <li>banana</li>
+  <li>orange</li>
+</ul> -->
+<ul>
+  <li>
+    <div>John</div>
+    <div><button>Say hello</button></div>
+  </li>
+  <li>
+    <div>Mary</div>
+    <div><button>Say hello</button></div>
+  </li>
+  <li>
+    <div>John</div>
+    <div><button>Say goodbye</button></div>
+  </li>
+  <li>
+    <div>Mary</div>
+    <div><button>Say goodbye</button></div>
+  </li>
+</ul>
+</body>
+</html>
+

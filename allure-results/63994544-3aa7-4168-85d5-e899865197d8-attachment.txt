@@ -1,1 +1,0 @@
-DELETE successful with status: 204

@@ -1,7 +1,0 @@
-POST Status: 201
-POST Response: {
-  name: 'Sidharth',
-  job: 'SDET',
-  id: '632',
-  createdAt: '2025-09-14T01:42:53.462Z'
-}

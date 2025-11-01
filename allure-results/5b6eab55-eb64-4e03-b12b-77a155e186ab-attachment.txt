@@ -1,1 +1,0 @@
-Mocked response: [ { id: 1, name: 'Mocked user' } ]

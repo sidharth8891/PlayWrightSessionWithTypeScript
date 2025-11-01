@@ -20,15 +20,13 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
 
   /* Retry on CI only */
-  retries: 2,
+  retries: process.env.CI ? 2 : 1,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-reporter: [
-    ['list'], // console reporter
-    ['html', { open: 'never' }], // HTML report
-    ['allure-playwright'] // Allure report
-  ]
+reporter: process.env.CI 
+    ? [['list'], ['html', { open: 'never' }], ['allure-playwright']]
+    : [['list'], ['html', { open: 'never' }], ['allure-playwright']]
 ,
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -41,7 +39,7 @@ reporter: [
     // Record trace only when retrying a test for the first time.
    //"on:, "off",'on-first-retry','retain-on-failure'
    baseURL: 'https://reqres.in/api',
-   trace: 'retain-on-failure', 
+   trace: process.env.CI ? 'retain-on-failure' : 'off', 
    ignoreHTTPSErrors: false,
 
 
@@ -53,7 +51,7 @@ reporter: [
     //   server: 'http://myproxy.com:3128',
     //   bypass: 'localhost',
     // },
-     headless: false,
+     headless: process.env.CI ? true : false,
      launchOptions: {
      slowMo: 1000,          // slows each action by 1s
     },

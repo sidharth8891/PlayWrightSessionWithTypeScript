@@ -1,42 +1,39 @@
-import { expect, Page } from '@playwright/test';
-import { customLogger } from '../logger/customLogger';
+
+import { Page, Locator } from '@playwright/test';
 
 export class LoginPage {
+  readonly page: Page;
+  readonly emailInput: Locator;
+  readonly passwordInput: Locator;
+  readonly nextButton: Locator;
 
-    readonly page : Page;
-    readonly usernameInput;
-    readonly passwordInput;
-    readonly loginButton;
-    readonly welcomeMessage;
-    readonly productsTitle;
-
-
-  constructor(page) {
+  constructor(page: Page) {
     this.page = page;
-    this.usernameInput = page.locator('#user-name');
-    this.passwordInput = page.locator('#password');
-    this.loginButton = page.locator('#login-button');
-    this.welcomeMessage = page.locator('h1');
-    this.productsTitle = page.locator('.product_label');
+    this.emailInput = this.page.getByLabel('Email or phone');
+    this.passwordInput = this.page.getByLabel('Enter your password');
+    this.nextButton = this.page.getByRole('button', { name: 'Next' });
   }
 
-  async goto() {
-    //logger.info('Navigating to login page');
-    await this.page.goto('https://www.saucedemo.com/v1/');
+  async enterEmail(email: string) {
+    await this.emailInput.fill(email);
   }
 
-  async login(username, password) {
-    //logger.info('Filling username and password');
-    await this.usernameInput.fill(username);
+  async enterPassword(password: string) {
     await this.passwordInput.fill(password);
-
-    //logger.info('Clicking login button');
-    await this.loginButton.click();
   }
 
-  async verifyLoginSuccess() {
-    await expect(this.productsTitle).toHaveText('Products');
-    //logger.info('Login successful, Products page is visible');
+  async clickNext() {
+    await this.nextButton.click();
   }
 
+  async login(email: string, password: string) {
+    await this.enterEmail(email);
+    await this.clickNext();
+    
+    // Wait for the URL to change to the password page
+    await this.page.waitForURL('**/signin/v2/challenge/password/**');
+    
+    await this.enterPassword(password);
+    await this.clickNext();
+  }
 }

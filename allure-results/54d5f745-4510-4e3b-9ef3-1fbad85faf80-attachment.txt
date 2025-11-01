@@ -1,7 +1,0 @@
-Created User: {
-  name: 'neo',
-  job: 'the one',
-  id: '643',
-  createdAt: '2025-09-20T02:29:42.060Z'
-}
-Fetched User: {}

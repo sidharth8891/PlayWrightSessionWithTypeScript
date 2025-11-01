@@ -1,9 +1,0 @@
-{
-  name: 'sid',
-  job: 'sdet',
-  skills: [ 'Java', 'Selenium' ],
-  address: { street: '123 lynnwodd', city: 'seattle' },
-  id: '409',
-  createdAt: '2025-09-20T05:02:15.129Z'
-}
-[ 'Java', 'Selenium' ]

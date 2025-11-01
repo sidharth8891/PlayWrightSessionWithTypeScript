@@ -1,3 +1,0 @@
-Sending GET request to relative URL: /users/2
-Headers from config will be applied automatically
-Response Status: 404

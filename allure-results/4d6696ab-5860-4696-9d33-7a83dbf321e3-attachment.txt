@@ -1,2 +1,0 @@
-PATCH Status: 200
-PATCH Response: { job: 'Sr. QA Engineer', updatedAt: '2025-09-14T01:04:45.760Z' }

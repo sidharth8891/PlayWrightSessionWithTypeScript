@@ -1,1 +1,0 @@
-Created Post: { title: 'foo', body: 'bar', userId: 1, id: 101 }

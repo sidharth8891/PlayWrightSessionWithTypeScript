@@ -1,7 +1,0 @@
-Created User: {
-  name: 'sid',
-  job: 'the one',
-  id: '794',
-  createdAt: '2025-09-20T05:12:22.161Z'
-}
-794

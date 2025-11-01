@@ -1,7 +1,0 @@
-Response Body: {
-  name: 'trinity',
-  job: 'operator',
-  address: { city: 'Zion', zip: '10001' },
-  id: '76',
-  createdAt: '2025-09-20T02:39:29.853Z'
-}

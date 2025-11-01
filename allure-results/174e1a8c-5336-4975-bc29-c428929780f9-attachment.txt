@@ -1,2 +1,0 @@
-PATCH Status: 200
-PATCH Response: { name: 'test', updatedAt: '2025-09-14T05:34:16.967Z' }

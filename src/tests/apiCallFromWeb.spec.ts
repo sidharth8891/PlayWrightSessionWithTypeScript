@@ -1,40 +1,40 @@
 
-import { test, request, APIRequestContext, expect } from '@playwright/test';
+// import { test, request, APIRequestContext, expect } from '@playwright/test';
 
-interface User {
- name: string;
- job: string;
-}
+// interface User {
+//  name: string;
+//  job: string;
+// }
 
-// Shared request context
-let apiContext: APIRequestContext;
+// // Shared request context
+// let apiContext: APIRequestContext;
 
-test.beforeAll(async ({ playwright }) => {
- apiContext = await playwright.request.newContext({
-   baseURL: 'https://reqres.in',
-   extraHTTPHeaders: {
-     'Content-Type': 'application/json',
-     'x-api-key': 'reqres-free-v1', // API key per request
-   },
- });
-});
+// test.beforeAll(async ({ playwright }) => {
+//  apiContext = await playwright.request.newContext({
+//    baseURL: 'https://reqres.in',
+//    extraHTTPHeaders: {
+//      'Content-Type': 'application/json',
+//      'x-api-key': 'reqres-free-v1', // API key per request
+//    },
+//  });
+// });
 
-test.afterAll(async () => {
- await apiContext.dispose();
-});
-
-
-test('Create user and validate response', async ({ page }) => {
- const user: User = { name: 'Neo', job: 'The One' };
+// test.afterAll(async () => {
+//  await apiContext.dispose();
+// });
 
 
- // 1️⃣ Create a new user (POST)
- const postResponse = await apiContext.post('/api/users', {
-   data: user,
- });
+// test('Create user and validate response', async ({ page }) => {
+//  const user: User = { name: 'Neo', job: 'The One' };
 
 
- expect(postResponse.status()).toBe(201);
- const createdUser = await postResponse.json();
- console.log('POST Response:', createdUser);
-});
+//  // 1️⃣ Create a new user (POST)
+//  const postResponse = await apiContext.post('/api/users', {
+//    data: user,
+//  });
+
+
+//  expect(postResponse.status()).toBe(201);
+//  const createdUser = await postResponse.json();
+//  console.log('POST Response:', createdUser);
+// });

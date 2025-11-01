@@ -1,7 +1,0 @@
-Response Status Code: 201
-Response Body: {
-  name: 'Sidharth',
-  job: 'SDET',
-  id: '882',
-  createdAt: '2025-09-20T04:38:28.436Z'
-}

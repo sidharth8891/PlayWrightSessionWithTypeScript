@@ -5,39 +5,64 @@ pipeline {
         nodejs 'NodeJS 20.19.3'   // Name configured in Jenkins Global Tool Config
     }
 
+    triggers {
+        cron('3 22 * * *') // Every day at 10:03 PM
+    }
+
     stages {
-        stage('Checkout') {
+        stage('Setup') {
             steps {
-                withCredentials(credentialsId : 
-                usernameVariable: "",
-                passwordVariable: "")]){
-                    sh 'git clone https://github.com/sidharth8891/PlayWrightSessionWithTypeScript.git'
-                }
+                // Ensure PATH includes necessary binaries
+                sh '''
+                    export PATH=$PATH:/usr/local/bin:/opt/homebrew/bin
+                    npm ci
+                    npx playwright install
+                '''
             }
         }
 
-        stage('Install Dependencies') {
+        stage('Run Tests') {
             steps {
-                sh 'npm ci'
-                sh 'npx playwright install'
+                sh 'npx playwright test --reporter=html'
             }
         }
 
-        stage('Run Playwright Tests') {
+        stage('Archive HTML Report') {
             steps {
-                sh 'npx playwright test'
+                publishHTML([allowMissing: false,
+                             alwaysLinkToLastBuild: true,
+                             keepAll: true,
+                             reportDir: 'playwright-report',
+                             reportFiles: 'index.html',
+                             reportName: "Playwright HTML Report"])
             }
         }
     }
 
     post {
         always {
-            publishHTML([
-                reportDir: 'playwright-report',
-                reportFiles: 'index.html',
-                reportName: 'html report'
-            ])
-            archieveArtifacts  artifacts: 'playwright-report/**'
+            // Email with HTML content and attachment
+            emailext(
+                subject: "Playwright Test Report - ${currentBuild.currentResult} | Build #${env.BUILD_NUMBER} | ${env.JOB_NAME}",
+                body: """
+                <html>
+                  <body style="font-family: Arial, sans-serif; color: #333;">
+                    <h2 style="color: #0078d7;">Playwright Test Execution Report</h2>
+                    <p>Hi Team,</p>
+                    <p>The Playwright test execution has been completed. Please find the report attached and/or view it in Jenkins:</p>
+                    <p>
+                      📊 <a href="${env.BUILD_URL}HTML_20Report" 
+                      style="color: #0078d7; text-decoration: none;">View Full HTML Report in Jenkins</a>
+                    </p>
+                    <p>Thanks,<br><b>Jenkins CI</b></p>
+                  </body>
+                </html>
+                """,
+                mimeType: 'text/html',
+                to: 'your-email@example.com',
+                attachLog: true,
+                attachmentsPattern: 'playwright-report/index.html'
+            )
         }
     }
 }

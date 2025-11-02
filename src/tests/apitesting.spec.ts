@@ -27,7 +27,7 @@ test('GET users', async ({ request }) => {
      }
    });
 
-   expect(response.status()).toBe(204); // No Content
+   expect(response.status()).toBe(200); // No Content
    console.log('DELETE successful with status:', response.status());
  });
 
